@@ -47,6 +47,21 @@ Route::get('/declaration-de-bien', function () {
     return view('declaration-de-bien');
 });
 
+Route::get('/recevoir-un-bien', function () {
+    return view('declaration-de-bien');
+});
+
+Route::get('/transferer-un-bien', function () {
+    return view('declaration-de-bien');
+});
+
+Route::get('/declaration-de-perte', function () {
+    return view('declaration-de-perte');
+});
+
+
+
+
 Route::get('/declaration-de-bien/{categorie}', function () {
     return view('declaration-de-bien-menu');
 });
@@ -78,6 +93,27 @@ Route::get('/formulaire/{categorie}', function(){
     }
     else if(str_contains(url()->current(), '/formulaire/television')){
         return view('formulaires.television');
+    }
+    else if(str_contains(url()->current(), '/formulaire/copieur')){
+        return view('formulaires.copieur');
+    }
+    else if(str_contains(url()->current(), '/formulaire/imprimante')){
+        return view('formulaires.imprimante');
+    }
+    else if(str_contains(url()->current(), '/formulaire/moto')){
+        return view('formulaires.moto');
+    }
+    else if(str_contains(url()->current(), '/formulaire/voiture')){
+        return view('formulaires.voiture');
+    }
+    else if(str_contains(url()->current(), '/formulaire/audio')){
+        return view('formulaires.audio');
+    }
+    else if(str_contains(url()->current(), '/formulaire/unite_centrale')){
+        return view('formulaires.unite_centrale');
+    }
+    else {
+        return view('formulaires.pc_portable');
     }
     
     

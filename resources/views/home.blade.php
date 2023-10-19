@@ -33,16 +33,16 @@ if ($_SESSION['auth']!="true") {
                         <h5 class="text-vert">Récevoir un bien</h5>
                     </a>
                 </div>
+                <div class="col-3 btn-transferer">
+                    <a href="/transferer-un-bien" class="btn card btn-large border-warning">
+                        <img src="assets/img/elements/televerser-un-fichier.gif" alt="" class="normal-img">
+                        <h5 class="text-vert">Transférer un bien</h5>
+                    </a>
+                </div>
                 <div class="col-3 declaration-perte">
                     <a href="/declaration-de-perte" class="btn card btn-large border-warning">
                         <img src="assets/img/elements/perte.gif" alt="" class="normal-img">
                         <h5 class="text-vert">Déclarer une perte</h5>
-                    </a>
-                </div>
-                <div class="col-3 offre-connecte">
-                    <a  href="/offres-connectees" class="btn card btn-large border-warning">
-                        <img src="assets/img/elements/offre_1.gif" alt="" class="normal-img">
-                        <h5 class="text-vert">Nos offres connectées</h5>
                     </a>
                 </div>
             </div>

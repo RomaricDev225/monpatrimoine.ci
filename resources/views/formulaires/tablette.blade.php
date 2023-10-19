@@ -22,15 +22,23 @@
                 $q = "select designation from groupe_bien where id=" . $_SESSION["myVariable"];
             ?>
            
-            <div class="libelle text-vert text-center" id="title">
-                <h1><b>Déclaration de bien</b></h1>
-                <h5>Ajouter un bien à votre patrimoine c'est confirmer qu'il vous appartient.</h5>
-                <hr>
-                
-                <h4 class="text-sombre"><?php echo retrieveDB($q, 1)[0][0] ?></h4>
-                <h64 class="text-muted">Tablette</h6>
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="btn btn-lg big-ico" onclick="window.history.back();">
+                        <h1><span class="fas fa-angle-left"></span></h1>
+                    </div>
+                </div>
+                <div class="col-lg-11">
+                    <div class="libelle text-vert text-center" id="title">
+                        <h1><b>Déclaration de bien</b></h1>
+                        <h5>Ajouter un bien à votre patrimoine c'est confirmer qu'il vous appartient.</h5>
+                        <hr>
+                        
+                        <h4 class="text-sombre"><?php echo retrieveDB($q, 1)[0][0] ?></h4>
+                        <h64 class="text-muted">Tablette</h6>
+                    </div>
+                </div>    
             </div>
-            
             
             <div class="space-body">
                 <?php include "pages/main-style.php" ?>
@@ -363,7 +371,7 @@
                             var ident = $("#id").val()
                             var designation = $("#designation").val()
                             var marque = $("#marque").val()
-                            var categ ="PHONE"
+                            var categ ="TAB"
                             var client = $("#ident_client").val()
                             var aujourdhui = dateActuelle()
                             var nameFileTab = [categ + "_imei_", categ + "_recu_", categ + "_1_", categ +  "_2_"]
@@ -418,8 +426,8 @@
                             return false
                         } 
                         else if (vide==2){
-                            $("#field").fadeOut(200)
-                            $("#image").fadeIn(1000)
+                            $("#field").fadeOut(200).addClass("inactive").removeClass("active")
+                            $("#image").fadeIn(1000).addClass("active").removeClass("inactive")
                             $(".btn-previous").removeClass("d-none")
                             $(this).find(".text").text("Valider")
                         }
@@ -431,8 +439,8 @@
                 })
                 
                 $(".btn-previous").click(function(){
-                    $("#field").fadeIn(1000)
-                    $("#image").fadeOut(200)
+                    $("#field").fadeIn(1000).addClass("active").removeClass("inactive")
+                    $("#image").fadeOut(200).addClass("inactive").removeClass("active")
                     $(".btn-previous").addClass("d-none")
                 })
                 

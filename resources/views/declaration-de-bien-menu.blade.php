@@ -55,13 +55,22 @@
         <div class="row">
             <div class="col-lg-11">
                 <div class="space py-5">
-                    <div class="libelle text-vert text-center">
-                        <h1><b>Déclaration de bien</b></h1>
-                        <h5>Ajouter un bien à votre patrimoine c'est confirmer qu'il vous appartient.</h5>
+                    <div class="row w-100 mx-5">
+                        <div class="col-lg-1">
+                            <div class="btn btn-lg big-ico" onclick="window.history.back();">
+                                <h1><span class="fas fa-angle-left"></span></h1>
+                            </div>
+                        </div>
+                        <div class="col-lg-11">
+                            <div class="libelle text-vert text-center" id="title">
+                                <h1><b>Déclaration de bien</b></h1>
+                                <h5>Ajouter un bien à votre patrimoine c'est confirmer qu'il vous appartient.</h5>
+                            </div>
+                        </div>
                     </div>
-                    <hr>
+                    
                     <div class="space pb-5">
-                        <div class="space-body">
+                        <div class="space-body pt-5">
                             <div class="choice_categ d-flex justify-content-center">
                                 <div class="row px-5">
                                     <?php for ($i=0; $i < $x; $i++) { ?>
